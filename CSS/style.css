@@ -25,6 +25,10 @@ body{
     margin-top: -250px;
 }
 
+.header{
+    position: fixed;
+}
+
 /* .home{
     margin: 10px 20px 0 0;
     overflow: auto
@@ -388,5 +392,8 @@ nav .fa-solid{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+    .column-list {
+        column-count: 2;
+      }
 
 }
