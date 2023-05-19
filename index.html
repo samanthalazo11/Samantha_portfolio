@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/3b46f5c2c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <script defer src="JS/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Samantha's Portfolio</title>
 </head>
 <body>
@@ -25,8 +26,8 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <h1>Welcome,</br> My name is <span class="myname">Samantha Lazo </span></h1>
-                <p class="intro">Full Stack Software Developer </p>
+                <h1>Welcome,</br> My name is <span class="myname">Samantha Lazo. </span></h1>
+                <p class="intro">A Full Stack Software Developer </p>
             </div>
             <!-- <div class="home">
                 <img src="images/user.jpg" alt="Samantha Lazo" class="photo">
@@ -147,7 +148,7 @@
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn" onclick="SendEmail()">Submit</button>
                 </form>
             </div>
         </div>
@@ -156,7 +157,19 @@
 
   </div>
 
-
+<script>
+    function SendEmail(){
+    Email.send({
+        SecureToken :"3526619c-9865-4ed8-ba4e-4cedff869b85",
+        To : 'lazoc.samantha@gmail.com',
+        From : "lazoc.samantha@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+ }
+</script>
 
 
 

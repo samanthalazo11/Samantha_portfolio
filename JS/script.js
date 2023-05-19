@@ -23,3 +23,15 @@
     function closemenu(){
         sidemenu.style.right = "-200px";
     }
+
+    function SendEmail(){
+        Email.send({
+            SecureToken :"3526619c-9865-4ed8-ba4e-4cedff869b85",
+            To : 'lazoc.samantha@gmail.com',
+            From : "lazoc.samantha@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+          );
+    }
